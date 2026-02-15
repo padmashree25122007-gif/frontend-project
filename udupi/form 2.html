@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Udupi Hotel</title>
+  <style>
+    /* same as above */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI',sans-serif; background:#fff8e1; }
+    nav { background:#d32f2f; padding:1rem; position:sticky; top:0; z-index:100; box-shadow:0 2px 10px rgba(0,0,0,0.2); }
+    nav ul { list-style:none; display:flex; justify-content:center; gap:2.5rem; }
+    nav a { color:white; text-decoration:none; font-weight:bold; font-size:1.1rem; }
+    nav a:hover { color:#ffecb3; }
+
+    .form-container {
+      max-width:700px;
+      margin:4rem auto;
+      background:white;
+      padding:3rem;
+      border-radius:15px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    }
+    h1 { text-align:center; color:#d32f2f; margin-bottom:1.5rem; }
+    .info { text-align:center; margin-bottom:2rem; color:#555; }
+    label { display:block; margin:1.2rem 0 0.5rem; font-weight:bold; }
+    input, textarea {
+      width:100%;
+      padding:0.9rem;
+      border:1px solid #ccc;
+      border-radius:8px;
+      font-size:1rem;
+    }
+    textarea { height:140px; resize:vertical; }
+    .btn {
+      background:#f57c00;
+      color:white;
+      border:none;
+      padding:1rem;
+      width:100%;
+      border-radius:8px;
+      font-size:1.3rem;
+      margin-top:2rem;
+      cursor:pointer;
+    }
+    .btn:hover { background:#ef6c00; }
+
+    footer { text-align:center; padding:2rem; background:#d32f2f; color:white; margin-top:4rem; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="booking.html">Book Table</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="form-container">
+    <h1>Get in Touch</h1>
+    <p class="info">We'd love to hear from you!</p>
+
+    <form>
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your name" required>
+
+      <label>Email</label>
+      <input type="email" placeholder="your@email.com" required>
+
+      <label>Phone</label>
+      <input type="tel" placeholder="Mobile number" required>
+
+      <label>Your Message / Enquiry</label>
+      <textarea placeholder="Type your message here..." required></textarea>
+<button type="submit" class="btn" onclick="window.location.href='tq.html'; return false;">
+  Book Table Now
+</button>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Udupi Hotel • Pure Veg • Traditional Taste</p>
+  </footer>
+
+</body>
+</html>

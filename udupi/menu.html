@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu - Udupi Hotel</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background:#fff8e1; color:#333; }
+    nav { 
+      background:#d32f2f; 
+      padding:1rem; 
+      position:sticky; 
+      top:0; 
+      z-index:100; 
+      box-shadow:0 2px 10px rgba(0,0,0,0.2); 
+    }
+    nav ul { 
+      list-style:none; 
+      display:flex; 
+      justify-content:center; 
+      gap:2.5rem; 
+    }
+    nav a { 
+      color:white; 
+      text-decoration:none; 
+      font-weight:bold; 
+      font-size:1.1rem; 
+      transition:0.3s; 
+    }
+    nav a:hover { color:#ffecb3; }
+
+    .container { 
+      max-width:1200px; 
+      margin:3rem auto; 
+      padding:0 1.5rem; 
+    }
+    h1 { 
+      text-align:center; 
+      color:#d32f2f; 
+      margin-bottom:2.5rem; 
+      font-size:3.2rem; 
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.5rem;
+    }
+    .menu-item {
+      background:white;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 8px 20px rgba(0,0,0,0.12);
+      transition:0.4s ease;
+      text-align:center;
+    }
+    .menu-item:hover { 
+      transform:translateY(-12px); 
+      box-shadow:0 20px 40px rgba(0,0,0,0.18); 
+    }
+    .menu-item img { 
+      width:100%; 
+      height:240px; 
+      object-fit:cover; 
+    }
+    .info { 
+      padding:1.5rem 1rem; 
+    }
+    .info h3 { 
+      color:#ef6c00; 
+      margin-bottom:0.8rem; 
+      font-size:1.6rem; 
+    }
+    .price { 
+      font-size:1.6rem; 
+      font-weight:bold; 
+      color:#388e3c; 
+      margin:1rem 0 1.2rem; 
+    }
+    .order-btn {
+      background:#388e3c;
+      color:white;
+      border:none;
+      padding:0.9rem 2rem;
+      font-size:1.2rem;
+      font-weight:bold;
+      border-radius:50px;
+      cursor:pointer;
+      transition:0.3s;
+      display:inline-block;
+      text-decoration:none;
+    }
+    .order-btn:hover {
+      background:#2e7d32;
+      transform:scale(1.08);
+    }
+
+    footer { 
+      text-align:center; 
+      padding:2.5rem; 
+      background:#d32f2f; 
+      color:white; 
+      margin-top:4rem; 
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="booking.html">Book Table</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Our Signature Menu</h1>
+    <div class="menu-grid">
+
+      <div class="menu-item">
+        <img src="https://hebbarskitchen.com/wp-content/uploads/2021/10/banana-leaf-thali-recipe-in-50-mins-south-indian-diwali-thali-how-to-serve-food-in-banana-leaf-1-scaled.jpeg" alt="Udupi Veg Thali">
+        <div class="info">
+          <h3>Udupi Veg Thali</h3>
+          <p>Traditional banana leaf thali with 12+ authentic items, rice, sambar, rasam & payasam</p>
+          <div class="price">₹ 220</div>
+          <a href="thankyou.html" class="order-btn">Order Now</a>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://thumbs.dreamstime.com/b/delicious-masala-dosa-sambar-chutney-close-up-traditional-south-indian-served-metal-tray-appetizing-dish-394339787.jpg" alt="Masala Dosa">
+        <div class="info">
+          <h3>Masala Dosa</h3>
+          <p>Crispy fermented rice crepe stuffed with spiced potato masala, served with chutneys & sambar</p>
+          <div class="price">₹ 95</div>
+          <a href="thankyou.html" class="order-btn">Order Now</a>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/2025-03/dosa.jpg" alt="Special Masala Dosa">
+        <div class="info">
+          <h3>Special Masala Dosa</h3>
+          <p>Extra crispy with butter, gunpowder (milagai podi) & generous potato filling</p>
+          <div class="price">₹ 110</div>
+          <a href="thankyou.html" class="order-btn">Order Now</a>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://pipingpotcurry.com/wp-content/uploads/2026/01/How-to-make-Uttapam-PipingPotCurry.jpg" alt="Onion Uttapam">
+        <div class="info">
+          <h3>Onion Uttapam</h3>
+          <p>Thick fluffy pancake topped with onions, tomatoes, green chillies & coriander</p>
+          <div class="price">₹ 85</div>
+          <a href="thankyou.html" class="order-btn">Order Now</a>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="https://i.ytimg.com/vi/PquiB-_oR7o/maxresdefault.jpg" alt="Udupi Deluxe Thali">
+        <div class="info">
+          <h3>Udupi Deluxe Thali</h3>
+          <p>Premium version with more varieties, extra sweets & special curries</p>
+          <div class="price">₹ 320</div>
+          <a href="form.html" class="order-btn">Order Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Udupi Hotel • Pure Vegetarian • Coimbatore • Come hungry, leave happy! 🍛</p>
+  </footer>
+
+</body>
+</html>

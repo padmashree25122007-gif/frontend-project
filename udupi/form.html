@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Table - Udupi Hotel</title>
+  <style>
+    /* same nav + footer */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI',sans-serif; background:#fff8e1; }
+    nav { background:#d32f2f; padding:1rem; position:sticky; top:0; z-index:100; box-shadow:0 2px 10px rgba(0,0,0,0.2); }
+    nav ul { list-style:none; display:flex; justify-content:center; gap:2.5rem; }
+    nav a { color:white; text-decoration:none; font-weight:bold; font-size:1.1rem; }
+    nav a:hover { color:#ffecb3; }
+
+    .form-container {
+      max-width:600px;
+      margin:4rem auto;
+      background:white;
+      padding:3rem;
+      border-radius:15px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    }
+    h1 { text-align:center; color:#d32f2f; margin-bottom:2rem; }
+    label { display:block; margin:1.2rem 0 0.5rem; font-weight:bold; }
+    input, select {
+      width:100%;
+      padding:0.9rem;
+      border:1px solid #ccc;
+      border-radius:8px;
+      font-size:1rem;
+    }
+    .btn {
+      background:#388e3c;
+      color:white;
+      border:none;
+      padding:1rem;
+      width:100%;
+      border-radius:8px;
+      font-size:1.3rem;
+      margin-top:2rem;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    .btn:hover { background:#2e7d32; }
+
+    footer { text-align:center; padding:2rem; background:#d32f2f; color:white; margin-top:4rem; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="booking.html">Book Table</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="form-container">
+    <h1>Reserve Your Table</h1>
+    <form>
+      <label>Name</label>
+      <input type="text" placeholder="Your full name" required>
+
+      <label>Phone Number</label>
+      <input type="tel" placeholder="10-digit mobile number" required>
+
+      <label>Date</label>
+      <input type="date" required>
+
+      <label>Time</label>
+      <input type="time" required>
+ 
+      <label>Number of People</label>
+      <select required>
+        <option value="">Select</option>
+        <option>1-2</option>
+        <option>3-4</option>
+        <option>5-6</option>
+        <option>7-10</option>
+        <option>10+</option>
+      </select>
+<button type="submit" class="btn" onclick="window.location.href='form 2.html'; return false;">
+  Book Table Now
+</button>
+      <button type="submit" class="btn">Book Table Now</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Udupi Hotel</p>
+  </footer>
+
+</body>
+</html>
