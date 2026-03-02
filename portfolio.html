@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Padmashree | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      height: 100vh;
+      min-height: 680px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 1000px;
+      z-index: 2;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid rgba(255,255,255,0.25);
+      margin-bottom: 1.8rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      margin-bottom: 0.4rem;
+      font-weight: 700;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.3rem, 4vw, 2rem);
+      margin: 1rem 0 2.2rem;
+      opacity: 0.95;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #4a148c;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      background: #20b858;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(37,213,102,0.4);
+    }
+
+    section {
+      padding: 90px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 3.5rem;
+      color: #4a148c;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      width: 90px;
+      height: 5px;
+      background: #667eea;
+      position: absolute;
+      bottom: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 3px;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.18rem;
+      text-align: center;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.8rem;
+      text-align: center;
+    }
+
+    .skill-item {
+      background: white;
+      padding: 2rem 1.2rem;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.09);
+      transition: transform 0.3s;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .skill-item i {
+      font-size: 3rem;
+      color: #667eea;
+      margin-bottom: 1.2rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.2rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      transition: transform 0.35s, box-shadow 0.35s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 22px 45px rgba(0,0,0,0.18);
+    }
+
+    .project-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 1.8rem;
+      text-align: center;
+    }
+
+    .project-info h3 {
+      margin-bottom: 0.6rem;
+      color: #4a148c;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      width: 64px;
+      height: 64px;
+      bottom: 35px;
+      right: 35px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      font-size: 32px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      background: #20b858;
+      transform: scale(1.15);
+    }
+
+    @media (max-width: 640px) {
+      .profile-pic { width: 150px; height: 150px; }
+      .cta-buttons { flex-direction: column; gap: 1.2rem; }
+      .whatsapp-float { width: 58px; height: 58px; font-size: 28px; bottom: 25px; right: 25px; }
+      section { padding: 70px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header>
+    <div class="hero-content">
+      <img 
+        src="me.jpeg" 
+        alt="Padmashree" 
+        class="profile-pic"
+      >
+      <h1>Hi, I'm Padmashree</h1>
+      <p class="hero-subtitle">Building My career in IT.Tech Explorer.Skill Developer</p>
+      
+      <div class="cta-buttons">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-eye"></i> View My Work
+        </a>
+        <a href="https://wa.me/8072877178?text=Hi%20Padmashree%2C%20I%20checked%20your%20portfolio..." 
+           class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <p>
+        Name : _P.Padmashree
+Register Number : _25055460500112040___
+Course : Bachelor of Computer Applications (BCA)
+Department : Computer Science / Computer Applications
+College Name : Sri Amaraavathi college of Arts And Science___
+University : _Bharathidasan University__
+Academic Year : 2025_ – 2028
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" style="background:#f0f2ff;">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-item"><i class="fab fa-html5"></i><p>HTML5</p></div>
+      <div class="skill-item"><i class="fab fa-css3-alt"></i><p>CSS3 / SCSS</p></div>
+      <div class="skill-item"><i class="fab fa-js"></i><p>JavaScript (ES6+)</p></div>
+      <div class="skill-item"><i class="fab fa-react"></i><p>React.js</p></div>
+      <div class="skill-item"><i class="fas fa-mobile-alt"></i><p>Responsive Design</p></div>
+      <div class="skill-item"><i class="fas fa-paint-brush"></i><p>UI/UX Basics</p></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Recent Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <img 
+          src="grand.jpeg"
+          alt="golden heaven" 
+          class="project-img"
+        >
+        <div class="project-info">
+          <h3>Grand heaven</h3>
+          <p> Frontent Design. Attractive Look </p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img 
+          src="ice.jpeg" 
+          alt="Project Card UI" 
+          class="project-img"
+        >
+        <div class="project-info">
+          <h3>icecream/h3>
+          <p> Morden.Frontent Design.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img 
+          src="udupi.jpeg" 
+          alt="Hotal" 
+          class="project-img"
+        >
+        <div class="project-info">
+          <h3>Weather Dashboard</h3>
+          <p>The World First Class Hotal</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/8072877178?text=Hi%20Padmashree%2C%20I%20saw%20your%20portfolio..." 
+     class="whatsapp-float" target="_blank" rel="noopener" title="Message me on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>
